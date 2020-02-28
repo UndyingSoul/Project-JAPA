@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;disableChatBotToolStripMenuItem.Name" xml:space="preserve">
+    <value>disableChatBotToolStripMenuItem</value>
+  </data>
   <data name="&gt;&gt;statusBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -135,9 +138,6 @@
   </data>
   <data name="lbl_command.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
-  </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startJAPAToolStripMenuItem.Name" xml:space="preserve">
     <value>startJAPAToolStripMenuItem</value>
@@ -172,6 +172,9 @@
   <data name="&gt;&gt;textModeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;logUserInteractionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>logUserInteractionsToolStripMenuItem</value>
+  </data>
   <data name="startJAPAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 22</value>
   </data>
@@ -187,8 +190,14 @@
   <data name="btn_submitCommand.Location" type="System.Drawing.Point, System.Drawing">
     <value>672, 356</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>759, 403</value>
+  </data>
   <data name="&gt;&gt;resetCommandsToolStripMenuItem.Name" xml:space="preserve">
     <value>resetCommandsToolStripMenuItem</value>
+  </data>
+  <data name="silentModeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Disable Voice Output</value>
   </data>
   <data name="&gt;&gt;textModeToolStripMenuItem.Name" xml:space="preserve">
     <value>textModeToolStripMenuItem</value>
@@ -350,20 +359,17 @@
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
-    <value>exitToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;viewToolStripMenuItem.Name" xml:space="preserve">
     <value>viewToolStripMenuItem</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 381</value>
   </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
   <data name="hideWhenMinimizedToolStripMenuItem.Text" xml:space="preserve">
     <value>Hide When Minimized</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btn_submitCommand.Text" xml:space="preserve">
     <value>Send</value>
@@ -380,6 +386,9 @@
   <data name="btn_submitCommand.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="disableChatBotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
   <data name="&gt;&gt;modifyCommandsToolStripMenuItem.Name" xml:space="preserve">
     <value>modifyCommandsToolStripMenuItem</value>
   </data>
@@ -388,6 +397,9 @@
   </data>
   <data name="&gt;&gt;setLogDirectoryToolStripMenuItem.Name" xml:space="preserve">
     <value>setLogDirectoryToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;disableChatBotToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;viewLogsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -447,6 +459,9 @@
   <data name="&gt;&gt;startJAPAToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="tb_console.Size" type="System.Drawing.Size, System.Drawing">
+    <value>734, 324</value>
+  </data>
   <data name="&gt;&gt;userInput.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -461,9 +476,6 @@
   </data>
   <data name="&gt;&gt;btn_submitCommand.Name" xml:space="preserve">
     <value>btn_submitCommand</value>
-  </data>
-  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
-    <value>settingsToolStripMenuItem</value>
   </data>
   <data name="modifyCommandsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
@@ -2423,6 +2435,9 @@
   <data name="userInput.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;troubleshootingToolStripMenuItem.Name" xml:space="preserve">
+    <value>troubleshootingToolStripMenuItem</value>
+  </data>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
     <value>View</value>
   </data>
@@ -2432,9 +2447,6 @@
   <data name="troubleshootingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 22</value>
   </data>
-  <data name="&gt;&gt;btn_submitCommand.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;setLogDirectoryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2443,6 +2455,9 @@
   </data>
   <data name="&gt;&gt;userInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_command.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 359</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>759, 22</value>
@@ -2471,17 +2486,11 @@
   <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
     <value>:)</value>
   </data>
-  <data name="&gt;&gt;configuringJAPAToolStripMenuItem.Name" xml:space="preserve">
-    <value>configuringJAPAToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="lbl_command.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="&gt;&gt;configuringJAPAToolStripMenuItem.Name" xml:space="preserve">
+    <value>configuringJAPAToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;hideWhenMinimizedToolStripMenuItem.Name" xml:space="preserve">
     <value>hideWhenMinimizedToolStripMenuItem</value>
@@ -2492,8 +2501,8 @@
   <data name="&gt;&gt;lbl_command.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>759, 403</value>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusBar.Name" xml:space="preserve">
     <value>statusBar</value>
@@ -2504,8 +2513,8 @@
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
-  <data name="silentModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Disable Voice Output</value>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;logToolStripMenuItem.Name" xml:space="preserve">
     <value>logToolStripMenuItem</value>
@@ -2525,8 +2534,8 @@
   <data name="&gt;&gt;startAutomaticallyToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_command.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 359</value>
+  <data name="&gt;&gt;settingsToolStripMenuItem.Name" xml:space="preserve">
+    <value>settingsToolStripMenuItem</value>
   </data>
   <data name="startAutomaticallyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
@@ -2540,8 +2549,8 @@
   <data name="hideWhenMinimizedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
   </data>
-  <data name="&gt;&gt;troubleshootingToolStripMenuItem.Name" xml:space="preserve">
-    <value>troubleshootingToolStripMenuItem</value>
+  <data name="&gt;&gt;notifyIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
@@ -2552,11 +2561,11 @@
   <data name="btn_submitCommand.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;logUserInteractionsToolStripMenuItem.Name" xml:space="preserve">
-    <value>logUserInteractionsToolStripMenuItem</value>
+  <data name="&gt;&gt;btn_submitCommand.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="tb_console.Size" type="System.Drawing.Size, System.Drawing">
-    <value>734, 324</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="tb_console.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

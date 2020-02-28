@@ -63,6 +63,7 @@
             this.tb_console = new System.Windows.Forms.RichTextBox();
             this.btn_submitCommand = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.disableChatBotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,7 @@
             // 
             resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.disableChatBotToolStripMenuItem,
             this.textModeToolStripMenuItem,
             this.silentModeToolStripMenuItem,
             this.startAutomaticallyToolStripMenuItem,
@@ -229,6 +231,7 @@
             // 
             resources.ApplyResources(this.hideWhenMinimizedToolStripMenuItem, "hideWhenMinimizedToolStripMenuItem");
             this.hideWhenMinimizedToolStripMenuItem.Name = "hideWhenMinimizedToolStripMenuItem";
+            this.hideWhenMinimizedToolStripMenuItem.Click += new System.EventHandler(this.hideWhenMinimizedToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -277,9 +280,14 @@
             // 
             // notifyIcon
             // 
-            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
+            // 
+            // disableChatBotToolStripMenuItem
+            // 
+            resources.ApplyResources(this.disableChatBotToolStripMenuItem, "disableChatBotToolStripMenuItem");
+            this.disableChatBotToolStripMenuItem.Name = "disableChatBotToolStripMenuItem";
+            this.disableChatBotToolStripMenuItem.Click += new System.EventHandler(this.disableChatBotToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -340,6 +348,7 @@
         private System.Windows.Forms.RichTextBox tb_console;
         private System.Windows.Forms.Button btn_submitCommand;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem disableChatBotToolStripMenuItem;
     }
 }
 
