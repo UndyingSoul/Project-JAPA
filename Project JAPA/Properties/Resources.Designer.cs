@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_JAPA.Properties
-{
-
-
+namespace Project_JAPA.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,562 @@ namespace Project_JAPA.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Project_JAPA.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] AI {
+            get {
+                object obj = ResourceManager.GetObject("AI", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] AIMLBot {
+            get {
+                object obj = ResourceManager.GetObject("AIMLBot", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Atomic {
+            get {
+                object obj = ResourceManager.GetObject("Atomic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Badanswer {
+            get {
+                object obj = ResourceManager.GetObject("Badanswer", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Biography {
+            get {
+                object obj = ResourceManager.GetObject("Biography", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Bot {
+            get {
+                object obj = ResourceManager.GetObject("Bot", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Botmaster {
+            get {
+                object obj = ResourceManager.GetObject("Botmaster", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+        ///&lt;?oxygen SCHSchema=&quot;../resources/schema/bot-configuration.xsd&quot;?&gt;
+        ///&lt;bots xmlns=&quot;http://aitools.org/programd/4.5/bot-configuration&quot;
+        ///    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        ///    xsi:schemaLocation=&quot;http://aitools.org/programd/4.5/bot-configuration http://aitools.org/programd/4.5/bot-configuration.xsd&quot;&gt;
+        ///    &lt;bot id=&quot;JAPA&quot; enabled=&quot;true&quot;&gt;
+        ///        &lt;properties href=&quot;properties.xml&quot;/&gt;
+        ///        &lt;predicates href=&quot;predicates.xml&quot;/&gt;
+        ///        &lt;substitutions href= [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string bots {
+            get {
+                return ResourceManager.GetString("bots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Client {
+            get {
+                object obj = ResourceManager.GetObject("Client", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Computers {
+            get {
+                object obj = ResourceManager.GetObject("Computers", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] CustomTagTest {
+            get {
+                object obj = ResourceManager.GetObject("CustomTagTest", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Default {
+            get {
+                object obj = ResourceManager.GetObject("Default", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot;name&quot; value=&quot;user&quot; /&gt;
+        ///  &lt;item name=&quot;he&quot; value=&quot;somebody&quot; /&gt;
+        ///  &lt;item name=&quot;she&quot; value=&quot;somebody&quot; /&gt;
+        ///  &lt;item name=&quot;it&quot; value=&quot;something&quot; /&gt;
+        ///  &lt;item name=&quot;they&quot; value=&quot;something&quot; /&gt;
+        ///  &lt;item name=&quot;age&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;birthday&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;boyfriend&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;brother&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;cat&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;does&quot; value=&quot;unknown&quot; /&gt;
+        ///  &lt;item name=&quot;d [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DefaultPredicates {
+            get {
+                return ResourceManager.GetString("DefaultPredicates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Emotion {
+            get {
+                object obj = ResourceManager.GetObject("Emotion", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Englishurdu {
+            get {
+                object obj = ResourceManager.GetObject("Englishurdu", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Food {
+            get {
+                object obj = ResourceManager.GetObject("Food", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot; HE &quot; value=&quot; she &quot; /&gt;
+        ///  &lt;item name=&quot; SHE &quot; value=&quot; he &quot; /&gt;
+        ///  &lt;item name=&quot; TO HIM &quot; value=&quot; to her &quot; /&gt;
+        ///  &lt;item name=&quot; FOR HIM &quot; value=&quot; for her &quot; /&gt;
+        ///  &lt;item name=&quot; WITH HIM &quot; value=&quot; with her &quot; /&gt;
+        ///  &lt;item name=&quot; ON HIM &quot; value=&quot; on her &quot; /&gt;
+        ///  &lt;item name=&quot; IN HIM &quot; value=&quot; in her &quot; /&gt;
+        ///  &lt;item name=&quot; TO HER &quot; value=&quot; to him &quot; /&gt;
+        ///  &lt;item name=&quot; FOR HER &quot; value=&quot; for him &quot; /&gt;
+        ///  &lt;item name=&quot; WITH HER &quot; value=&quot; with him &quot; /&gt;
+        ///  &lt;item name=&quot;  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GenderSubstitutions {
+            get {
+                return ResourceManager.GetString("GenderSubstitutions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Geography {
+            get {
+                object obj = ResourceManager.GetObject("Geography", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] History {
+            get {
+                object obj = ResourceManager.GetObject("History", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Inquiry {
+            get {
+                object obj = ResourceManager.GetObject("Inquiry", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Interjection {
+            get {
+                object obj = ResourceManager.GetObject("Interjection", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] IU {
+            get {
+                object obj = ResourceManager.GetObject("IU", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Knowledge {
+            get {
+                object obj = ResourceManager.GetObject("Knowledge", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Literature {
+            get {
+                object obj = ResourceManager.GetObject("Literature", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Money {
+            get {
+                object obj = ResourceManager.GetObject("Money", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Movies {
+            get {
+                object obj = ResourceManager.GetObject("Movies", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Music {
+            get {
+                object obj = ResourceManager.GetObject("Music", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot; WITH YOU &quot; value=&quot; with me &quot; /&gt;
+        ///  &lt;item name=&quot; WITH ME &quot; value=&quot; with you &quot; /&gt;
+        ///  &lt;item name=&quot; TO YOU &quot; value=&quot; to me &quot; /&gt;
+        ///  &lt;item name=&quot; TO ME &quot; value=&quot; to you &quot; /&gt;
+        ///  &lt;item name=&quot; OF YOU &quot; value=&quot; of me &quot; /&gt;
+        ///  &lt;item name=&quot; OF ME &quot; value=&quot; of you &quot; /&gt;
+        ///  &lt;item name=&quot; FOR YOU &quot; value=&quot; for me &quot; /&gt;
+        ///  &lt;item name=&quot; FOR ME &quot; value=&quot; for you &quot; /&gt;
+        ///  &lt;item name=&quot; GIVE YOU &quot; value=&quot; give me &quot; /&gt;
+        ///  &lt;item name=&quot; GIVE ME &quot; value=&quot; give you &quot; /&gt;
+        ///  &lt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Person2Substitutions {
+            get {
+                return ResourceManager.GetString("Person2Substitutions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Personality {
+            get {
+                object obj = ResourceManager.GetObject("Personality", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot; I WAS &quot; value=&quot; he or she was &quot; /&gt;
+        ///  &lt;item name=&quot; I AM &quot; value=&quot; he or she is &quot; /&gt;
+        ///  &lt;item name=&quot; I &quot; value=&quot; he or she &quot; /&gt;
+        ///  &lt;item name=&quot; HE WAS &quot; value=&quot; I was &quot; /&gt;
+        ///  &lt;item name=&quot; SHE WAS &quot; value=&quot; I was &quot; /&gt;
+        ///  &lt;item name=&quot; ME &quot; value=&quot; him or her &quot; /&gt;
+        ///  &lt;item name=&quot; MY &quot; value=&quot; his or her &quot; /&gt;
+        ///  &lt;item name=&quot; MYSELF &quot; value=&quot; him or herself &quot; /&gt;
+        ///&lt;/root&gt;
+        ///.
+        /// </summary>
+        internal static string PersonSubstitutions {
+            get {
+                return ResourceManager.GetString("PersonSubstitutions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Philosophy {
+            get {
+                object obj = ResourceManager.GetObject("Philosophy", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Pickup {
+            get {
+                object obj = ResourceManager.GetObject("Pickup", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Predicates {
+            get {
+                object obj = ResourceManager.GetObject("Predicates", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Reduce {
+            get {
+                object obj = ResourceManager.GetObject("Reduce", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Reductions {
+            get {
+                object obj = ResourceManager.GetObject("Reductions", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Salutations {
+            get {
+                object obj = ResourceManager.GetObject("Salutations", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Science {
+            get {
+                object obj = ResourceManager.GetObject("Science", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot;aimldirectory&quot; value=&quot;aiml&quot;/&gt;
+        ///  &lt;item name=&quot;configdirectory&quot; value=&quot;config&quot;/&gt;
+        ///  &lt;item name=&quot;logdirectory&quot; value=&quot;logs&quot;/&gt;
+        ///  &lt;item name=&quot;splittersfile&quot; value=&quot;Splitters.xml&quot;/&gt;
+        ///  &lt;item name=&quot;person2substitutionsfile&quot; value=&quot;Person2Substitutions.xml&quot;/&gt;
+        ///  &lt;item name=&quot;personsubstitutionsfile&quot; value=&quot;PersonSubstitutions.xml&quot;/&gt;
+        ///  &lt;item name=&quot;gendersubstitutionsfile&quot; value=&quot;GenderSubstitutions.xml&quot;/&gt;
+        ///  &lt;item name=&quot;defaultpredicates&quot; value=&quot;Default [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item value=&quot;.&quot;/&gt;
+        ///  &lt;item value=&quot;!&quot;/&gt;
+        ///  &lt;item value=&quot;?&quot;/&gt;
+        ///  &lt;item value=&quot;;&quot;/&gt;
+        ///&lt;/root&gt;
+        ///.
+        /// </summary>
+        internal static string Splitters {
+            get {
+                return ResourceManager.GetString("Splitters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Stack {
+            get {
+                object obj = ResourceManager.GetObject("Stack", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Stories {
+            get {
+                object obj = ResourceManager.GetObject("Stories", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;root&gt;
+        ///  &lt;item name=&quot;=REPLY&quot; value=&quot;&quot; /&gt;
+        ///  &lt;item name=&quot;NAME=RESET&quot; value=&quot;&quot; /&gt;
+        ///  &lt;item name=&quot;:-)&quot; value=&quot; smile &quot; /&gt;
+        ///  &lt;item name=&quot;:)&quot; value=&quot; smile &quot; /&gt;
+        ///  &lt;item name=&quot;,)&quot; value=&quot; smile &quot; /&gt;
+        ///  &lt;item name=&quot;;)&quot; value=&quot; smile &quot; /&gt;
+        ///  &lt;item name=&quot;;-)&quot; value=&quot; smile &quot; /&gt;
+        ///  &lt;item name=&quot;&amp;quot;&quot; value=&quot;&quot; /&gt;
+        ///  &lt;item name=&quot;/&quot; value=&quot; &quot; /&gt;
+        ///  &lt;item name=&quot;&amp;gt;&quot; value=&quot; gt &quot; /&gt;
+        ///  &lt;item name=&quot;&amp;lt;&quot; value=&quot; lt &quot; /&gt;
+        ///  &lt;item name=&quot;(&quot; value=&quot; &quot; /&gt;
+        ///  &lt;item name=&quot;)&quot; value=&quot; &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Substitutions {
+            get {
+                return ResourceManager.GetString("Substitutions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] That {
+            get {
+                object obj = ResourceManager.GetObject("That", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] train {
+            get {
+                object obj = ResourceManager.GetObject("train", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }
