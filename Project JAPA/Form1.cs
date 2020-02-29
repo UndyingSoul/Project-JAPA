@@ -14,6 +14,8 @@ using System.Speech.Synthesis;
 using AIMLbot;
 using Newtonsoft.Json;
 using System.IO;
+using System.Threading;
+using FDL.Library.Numeric;
 
 namespace Project_JAPA
 {
@@ -26,7 +28,10 @@ namespace Project_JAPA
 			silentMode = false,
 			disableChatBot = false,
 			startAutomatically = false,
-			hideWhenMinimized = false
+			hideWhenMinimized = false,
+			name = "user",
+			companionSettings = new CompanionSettings { volume = 100, speed = 1, randomWaitToRespondMaxMs = 0 },
+			logSettings = new LogSettings { logConversations = true, logDirectory = Directory.GetCurrentDirectory() }
 		};
 
 		public bool _JAPAenabled = false;
@@ -51,9 +56,20 @@ namespace Project_JAPA
 			companion.loadAIMLFromFiles();
 			companion.isAcceptingUserInput = false;
 
-			//settings = JsonConvert.DeserializeObject<JSONSettings>(File.ReadAllText(@"settings.json"));
+			if (File.Exists("settings.json"))
+			{
+				logger.Info("Loading settings...");
+				settings = JsonConvert.DeserializeObject<JSONSettings>(File.ReadAllText(@"settings.json"));
+				UpdateSettings();
+				logger.Info("Settings loaded.");
+			}
+			else
+			{
+				logger.Info("Could not find settings file. Creating a new one.");
+				UpdateSettings();
+			}
 
-			user = new User(Environment.UserName, companion);
+			user = new User(settings.name, companion);
 
 			synthesisEngine.Volume = 100;
 			synthesisEngine.Rate = 1;
@@ -101,36 +117,49 @@ namespace Project_JAPA
 		}
 		private void resetConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			// TODO - need to do this.
+			logger.Info("Reset settings to their default values.");
+			File.Delete("settings.json");
+			settings = new JSONSettings
+			{
+				textMode = false,
+				silentMode = false,
+				disableChatBot = false,
+				startAutomatically = false,
+				hideWhenMinimized = false,
+				name = "user",
+				companionSettings = new CompanionSettings { volume = 100, speed = 1, randomWaitToRespondMaxMs = 0 },
+				logSettings = new LogSettings { logConversations = true, logDirectory = Directory.GetCurrentDirectory() }
+			};
+			UpdateSettings();
 		}
 		private void silentModeToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			silentModeToolStripMenuItem.Checked = !silentModeToolStripMenuItem.Checked;
-			settings.silentMode = settings.silentMode;
+			settings.silentMode = !settings.silentMode;
+			UpdateSettings();
 			// TODO - Enable Silent Mode (Does Text based output instead of tts.)
 		}
 
 		private void textModeToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			textModeToolStripMenuItem.Checked = !textModeToolStripMenuItem.Checked;
 			settings.textMode = !settings.textMode;
+			UpdateSettings();
 			// TODO - Enable Text mode (inputs text entered in the application as speech recognition and disables speech recognition)
 		}
 		private void startAutomaticallyToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			startAutomaticallyToolStripMenuItem.Checked = !startAutomaticallyToolStripMenuItem.Checked;
 			settings.startAutomatically = !settings.startAutomatically;
+			UpdateSettings();
 			// TODO - Makes application start automatically as a service.
 		}
 		private void disableChatBotToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			disableChatBotToolStripMenuItem.Checked = !disableChatBotToolStripMenuItem.Checked;
 			settings.disableChatBot = !settings.disableChatBot;
+			UpdateSettings();
 		}
 		private void hideWhenMinimizedToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			hideWhenMinimizedToolStripMenuItem.Checked = !hideWhenMinimizedToolStripMenuItem.Checked;
 			settings.hideWhenMinimized = !settings.hideWhenMinimized;
+			UpdateSettings();
 		}
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -148,6 +177,7 @@ namespace Project_JAPA
 
 				companion.isAcceptingUserInput = true;
 				logger.Info("Session started.");
+				statusBar.Text = "Awaiting user input";
 			}
 			else
 			{
@@ -159,6 +189,7 @@ namespace Project_JAPA
 
 				companion.isAcceptingUserInput = false;
 				logger.Info("Session ended.");
+				statusBar.Text = "Stopped";
 			}
 			_JAPAenabled = !_JAPAenabled;
 		}
@@ -169,13 +200,25 @@ namespace Project_JAPA
 		}
 		private void btn_submitCommand_Click(object sender, EventArgs e)
 		{
+			statusBar.Text = "Processing command";
 			logger.Info("Sent Text - \"{0}\"", userInput.Text);
+			System.Threading.Thread.Sleep(RandomNumber.Between(0, settings.companionSettings.randomWaitToRespondMaxMs));
 			string returnValue = "";
 
 			if (userInput.Text.ToLower().StartsWith("say"))
 			{
 				returnValue = userInput.Text.Substring(4, userInput.Text.Length-4);
 			} 
+			else if (userInput.Text.ToLower().StartsWith("clear screen"))
+			{
+				tb_console.Text = "";
+				returnValue = "Cleared screen.";
+			}
+			else if (userInput.Text.ToLower().StartsWith("stop talking"))
+			{
+				synthesisEngine.SpeakAsyncCancelAll();
+				returnValue = "Sounds good.";
+			}
 			else if (settings.disableChatBot == false)
 			{
 				Request r;
@@ -201,6 +244,7 @@ namespace Project_JAPA
 			{
 				synthesisEngine.SpeakAsync(returnValue);
 			}
+			statusBar.Text = "Awaiting user input";
 		}
         #endregion
         private void startSpeechRecognition()
@@ -219,6 +263,70 @@ namespace Project_JAPA
 			_JAPAenabled = true;
 
 			companion.isAcceptingUserInput = true;
+		}
+		void UpdateSettings()
+		{
+			silentModeToolStripMenuItem.Checked = settings.silentMode;
+			startAutomaticallyToolStripMenuItem.Checked = settings.startAutomatically;
+			textModeToolStripMenuItem.Checked = settings.textMode;
+			hideWhenMinimizedToolStripMenuItem.Checked = settings.hideWhenMinimized;
+			disableChatBotToolStripMenuItem.Checked = settings.disableChatBot;
+			logUserInteractionsToolStripMenuItem.Checked = settings.logSettings.logConversations;
+			System.IO.File.WriteAllText("settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
+		}
+
+		private void logUserInteractionsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			settings.logSettings.logConversations = !settings.logSettings.logConversations;
+			UpdateSettings();
+		}
+
+		private void setLogDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog folderBrowser = new OpenFileDialog();
+			// Set validate names and check file exists to false otherwise windows will
+			// not let you select "Folder Selection."
+			folderBrowser.Title = "Select a folder to house the logs";
+			folderBrowser.InitialDirectory = settings.logSettings.logDirectory;
+			folderBrowser.ValidateNames = false;
+			folderBrowser.CheckFileExists = false;
+			folderBrowser.CheckPathExists = true;
+			// Always default to Folder Selection.
+			folderBrowser.FileName = "Select a folder";
+
+			if (folderBrowser.ShowDialog() == DialogResult.OK)
+			{
+				settings.logSettings.logDirectory = Path.GetDirectoryName(folderBrowser.FileName);
+				UpdateSettings();
+			}
+		}
+		void openBrowser(string target)
+		{
+			try
+			{
+				System.Diagnostics.Process.Start(target);
+			}
+			catch
+				(
+				 System.ComponentModel.Win32Exception noBrowser)
+			{
+				if (noBrowser.ErrorCode == -2147467259)
+					MessageBox.Show(noBrowser.Message);
+			}
+			catch (System.Exception other)
+			{
+				MessageBox.Show(other.Message);
+			}
+		}
+
+		private void knownIssuesToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			openBrowser("https://github.com/UndyingSoul/Project-JAPA/issues?q=is%3Aopen+is%3Aissue+label%3Abug");
+		}
+
+		private void gitHubRepositoryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			openBrowser("https://github.com/UndyingSoul/Project-JAPA");
 		}
 	}
 }

@@ -41,7 +41,6 @@
             this.usingJAPAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuringJAPAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.troubleshootingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commandsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +50,7 @@
             this.viewLogsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableChatBotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silentModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startAutomaticallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +63,10 @@
             this.tb_console = new System.Windows.Forms.RichTextBox();
             this.btn_submitCommand = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.disableChatBotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitHubRepositoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.knownIssuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contributingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +125,10 @@
             this.usingJAPAToolStripMenuItem,
             this.configuringJAPAToolStripMenuItem,
             this.troubleshootingToolStripMenuItem,
-            this.manualToolStripMenuItem});
+            this.toolStripSeparator5,
+            this.contributingToolStripMenuItem,
+            this.knownIssuesToolStripMenuItem,
+            this.gitHubRepositoryToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             // 
             // usingJAPAToolStripMenuItem
@@ -139,11 +145,6 @@
             // 
             resources.ApplyResources(this.troubleshootingToolStripMenuItem, "troubleshootingToolStripMenuItem");
             this.troubleshootingToolStripMenuItem.Name = "troubleshootingToolStripMenuItem";
-            // 
-            // manualToolStripMenuItem
-            // 
-            resources.ApplyResources(this.manualToolStripMenuItem, "manualToolStripMenuItem");
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
             // 
             // viewToolStripMenuItem
             // 
@@ -174,11 +175,13 @@
             // 
             resources.ApplyResources(this.logUserInteractionsToolStripMenuItem, "logUserInteractionsToolStripMenuItem");
             this.logUserInteractionsToolStripMenuItem.Name = "logUserInteractionsToolStripMenuItem";
+            this.logUserInteractionsToolStripMenuItem.Click += new System.EventHandler(this.logUserInteractionsToolStripMenuItem_Click);
             // 
             // setLogDirectoryToolStripMenuItem
             // 
             resources.ApplyResources(this.setLogDirectoryToolStripMenuItem, "setLogDirectoryToolStripMenuItem");
             this.setLogDirectoryToolStripMenuItem.Name = "setLogDirectoryToolStripMenuItem";
+            this.setLogDirectoryToolStripMenuItem.Click += new System.EventHandler(this.setLogDirectoryToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -208,6 +211,12 @@
             this.resetCommandsToolStripMenuItem,
             this.modifyCommandsToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            // 
+            // disableChatBotToolStripMenuItem
+            // 
+            resources.ApplyResources(this.disableChatBotToolStripMenuItem, "disableChatBotToolStripMenuItem");
+            this.disableChatBotToolStripMenuItem.Name = "disableChatBotToolStripMenuItem";
+            this.disableChatBotToolStripMenuItem.Click += new System.EventHandler(this.disableChatBotToolStripMenuItem_Click);
             // 
             // textModeToolStripMenuItem
             // 
@@ -283,11 +292,27 @@
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
-            // disableChatBotToolStripMenuItem
+            // gitHubRepositoryToolStripMenuItem
             // 
-            resources.ApplyResources(this.disableChatBotToolStripMenuItem, "disableChatBotToolStripMenuItem");
-            this.disableChatBotToolStripMenuItem.Name = "disableChatBotToolStripMenuItem";
-            this.disableChatBotToolStripMenuItem.Click += new System.EventHandler(this.disableChatBotToolStripMenuItem_Click);
+            resources.ApplyResources(this.gitHubRepositoryToolStripMenuItem, "gitHubRepositoryToolStripMenuItem");
+            this.gitHubRepositoryToolStripMenuItem.Name = "gitHubRepositoryToolStripMenuItem";
+            this.gitHubRepositoryToolStripMenuItem.Click += new System.EventHandler(this.gitHubRepositoryToolStripMenuItem_Click);
+            // 
+            // knownIssuesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.knownIssuesToolStripMenuItem, "knownIssuesToolStripMenuItem");
+            this.knownIssuesToolStripMenuItem.Name = "knownIssuesToolStripMenuItem";
+            this.knownIssuesToolStripMenuItem.Click += new System.EventHandler(this.knownIssuesToolStripMenuItem_Click);
+            // 
+            // contributingToolStripMenuItem
+            // 
+            resources.ApplyResources(this.contributingToolStripMenuItem, "contributingToolStripMenuItem");
+            this.contributingToolStripMenuItem.Name = "contributingToolStripMenuItem";
+            // 
+            // toolStripSeparator5
+            // 
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
             // 
             // Form1
             // 
@@ -331,7 +356,6 @@
         private System.Windows.Forms.ToolStripMenuItem usingJAPAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuringJAPAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem troubleshootingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetCommandsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startJAPAToolStripMenuItem;
@@ -349,6 +373,10 @@
         private System.Windows.Forms.Button btn_submitCommand;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem disableChatBotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem contributingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem knownIssuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gitHubRepositoryToolStripMenuItem;
     }
 }
 
