@@ -9,5 +9,4 @@
     
      steps:
        - checkout
-       - run: dotnet restore
-       - run: dotnet build
+       - run: msbuild -m ".\Project JAPA.sln"
